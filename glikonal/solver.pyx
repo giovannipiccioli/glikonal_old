@@ -2,7 +2,7 @@
 # distutils: language=c++
 
 """
-The core module of PyKonal for solving the Eikonal equation.
+The core module of Glikonal for solving the Eikonal equation.
 
 This module provides the core class (:class:`pykonal.solver.EikonalSolver`),
 which gets imported into the root-level namespace and can thus be
@@ -10,10 +10,10 @@ instantiated as below:
 
 .. code-block:: python
 
-   import pykonal
-   solver = pykonal.EikonalSolver(coord_sys="cartesian")
+   import glikonal
+   solver = glikonal.EikonalSolver(coord_sys="cartesian")
 
-An additional convenience class (:class:`pykonal.solver.PointSourceSolver`)
+An additional convenience class (:class:`glikonal.solver.PointSourceSolver`)
 is made available in this module.
 """
 
