@@ -3,12 +3,12 @@ requires = ['setuptools', 'wheel', 'Cython>=0.29.14', 'numpy']
 build-backend = 'setuptools.build_meta'
 
 [project]
-name = 'pykonal'
-version = '0.4.0'
+name = 'glikonal'
+version = '0.0.0'
 authors = [
-    {name='Malcolm C. A. White', email='malcolmw@mit.edu'}
+    {name='Malcolm C. A. White, Giovanni Piccioli', email='giovannipiccioli@gmail.com'}
 ]
-description = 'Solve the Eikonal equation in 3D Cartesian or spherical coordinates.'
+description = 'Compute the minimal altitude to safely return to an airport in gliding flight'
 readme = 'README.md'
 requires-python = '>= 3.6'
 classifiers = [
@@ -23,5 +23,5 @@ classifiers = [
 ]
 
 [project.urls]
-'Homepage' = 'https://github.com/malcolmw/pykonal'
-'Bug Tracker' = 'https://github.com/malcolmw/pykonal/issues'
+'Homepage' = 'https://github.com/giovannipiccioli/glikonal'
+'Bug Tracker' = 'https://github.com/giovannipiccioli/glikonal/issues'
