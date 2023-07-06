@@ -2,19 +2,11 @@
 ![](https://img.shields.io/github/forks/malcolmw/pykonal)
 ![](https://img.shields.io/github/stars/malcolmw/pykonal)
 ![](https://img.shields.io/github/license/malcolmw/pykonal)
-# Welcome to the *pykonal* repository!
+# Welcome to the *glikonal* repository!
+This code computes the minimal altitude for an unpowered aircraft to return to an airport.
+The code is mainly built on top of the *pykonal* library available [here](https://github.com/malcolmw/pykonal)
+This code implements the Fast Marching Method (FMM; Sethian *et al.*, 1996) for solving the eikonal equation in Cartesian or spherical coordinates in 2 or 3 dimensions.
 
-This code implements the Fast Marching Method (FMM; Sethian *et al.*, 1996) for solving the eikonal equation in Cartesian or spherical coordinates in 2 or 3 dimensions. The method implements mixed first- and second-order finite differences.
-
-![Raypaths](figures/pykonal_rays.png)
-
-PyKonal offers two features that are absent from the comparable [scikit-fmm](https://pythonhosted.org/scikit-fmm/ "sckit-fmm documentation") package: (a) an implementation in spherical coordinates, and (b) functionality to compute shortest-traveltime paths.
-
-## Documentation
-Documentation is available [here](https://malcolmw.github.io/pykonal-docs/ "PyKonal documentation").
-    
-## Citation
-If you make use of this code in published work, please cite White *et al.* (2020).
 
 ## Installation
 
