@@ -9,6 +9,7 @@ from . cimport heapq
 cdef class EikonalSolver(object):
     cdef str                       cy_coord_sys
     cdef fields.ScalarField3D      cy_velocity
+    cdef fields.ScalarField3D      cy_elevation
     cdef fields.ScalarField3D      cy_traveltime
     cdef heapq.Heap                cy_trial
     cdef constants.BOOL_t[:,:,:]   cy_known

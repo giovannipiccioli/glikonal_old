@@ -71,7 +71,7 @@ cdef class EikonalSolver(object):
     def __init__(self, coord_sys="cartesian"):
         self.cy_coord_sys = coord_sys
         self.cy_velocity = fields.ScalarField3D(coord_sys=self.coord_sys)
-
+        self.cy_elevation = fields.ScalarField3D(coord_sys=self.coord_sys) #added elevation function
 
     @property
     def trial(self):
@@ -196,6 +196,14 @@ cdef class EikonalSolver(object):
         return (self.cy_velocity)
 
     @property
+    def elevation(self):
+        """
+        [*Read/Write*, :class:`pykonal.fields.ScalarField3D`] 3D array
+        of velocity values.
+        """
+        return (self.cy_elevation)
+
+    @property
     def vv(self):
         """
         [*Read/Write*, :class:`pykonal.fields.ScalarField3D`] Alias for
@@ -238,6 +246,7 @@ cdef class EikonalSolver(object):
 
         tt = self.traveltime.values
         vv = self.velocity.values
+        hh = self.elevation.values
         norm = self.velocity.norm
         known = self.known
         unknown = self.unknown
@@ -267,7 +276,7 @@ cdef class EikonalSolver(object):
                             )\
                             % max_idx[jax]
                         else:
-                            nbrs[inbr][jax] = active_idx[jax] + switch[jax]
+                            nbrs[inbr][jax] = active_idx[jax] + switch[jax] #finding the neighbours
                     inbr += 1
 
             # Recompute the traveltime values at all Trial neighbours
@@ -280,7 +289,7 @@ cdef class EikonalSolver(object):
                     for iax in range(3):
                         switch = [0, 0, 0]
                         idrxn = 0
-                        if norm[nbr[0], nbr[1], nbr[2], iax] == 0:
+                        if norm[nbr[0], nbr[1], nbr[2], iax] == 0: #case of zero derivative
                             aa[iax], bb[iax], cc[iax] = 0, 0, 0
                             continue
                         for idrxn in range(2):
@@ -338,7 +347,7 @@ cdef class EikonalSolver(object):
                                 ) / norm[nbr[0], nbr[1], nbr[2], iax]
                             else:
                                 order[idrxn], fdu[idrxn] = 0, 0
-                        if fdu[0] > -fdu[1]:
+                        if fdu[0] > -fdu[1]: #checks which derivative (left or right) is smaller and uses that one (maybe ??)
                             # Do the update using the backward operator
                             idrxn, switch[iax] = 0, -1
                         else:
@@ -390,7 +399,10 @@ cdef class EikonalSolver(object):
                         count_b += 1
                     else:
                         new = (-b + sqrt(b**2 - 4*a*c)) / (2*a)
-                    if new < tt[nbr[0], nbr[1], nbr[2]]:
+                    
+                    if new<hh[nbr[0], nbr[1], nbr[2]]:
+                        new=hh[nbr[0], nbr[1], nbr[2]] #step to avoid the terrain!
+                    if new < tt[nbr[0], nbr[1], nbr[2]]: #assign the newly found value, if it is smaller than the previous one.
                         tt[nbr[0], nbr[1], nbr[2]] = new
                         # Tag as Trial all neighbours of Active that are not
                         # Alive. If the neighbour is in Far, remove it from
