@@ -10,15 +10,15 @@ from Cython.Build import cythonize
 
 
 # Package meta-data.
-name            = "pykonal"
-description     = "Solve the Eikonal equation in 3D Cartesian or spherical coordinates."
-url             = "https://github.com/malcolmw/pykonal"
-email           = "malcolmw@mit.edu"
-author          = "Malcolm C. A. White"
+name            = "glikonal"
+description     = "Compute minimal altitude for an unpowered aircraft to glide back to the airport."
+url             = "https://github.com/giovannipiccioli/glikonal"
+email           = "giovannipiccioli#gmail.com"
+author          = "Giovanni Piccioli"
 requires_python = ">=3"
-packages        = ["pykonal"]
+packages        = ["glikonal"]
 package_data    = {
-    "pykonal": ["data/*", "data/marmousi2/*", "tests/data/*"],
+    "glikonal": ["data/*", "data/marmousi2/*", "tests/data/*"],
 }
 required        = ["cython>=0.29.14", "h5py", "numpy", "scipy"]
 extras          = {"tests": ["nose"]}
