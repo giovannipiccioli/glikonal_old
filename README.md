@@ -4,7 +4,7 @@
 ![](https://img.shields.io/github/license/malcolmw/pykonal)
 # Welcome to the *glikonal* repository!
 This code computes the minimal altitude for an unpowered aircraft to return to an airport.
-The code is mainly built on top of the *pykonal* library available [here](https://github.com/malcolmw/pykonal)
+The code is mainly built on top of the *pykonal* library available [here](https://github.com/malcolmw/pykonal).
 This code implements the Fast Marching Method (FMM; Sethian *et al.*, 1996) for solving the eikonal equation in Cartesian or spherical coordinates in 2 or 3 dimensions.
 
 
