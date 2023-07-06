@@ -1,5 +1,5 @@
-include pykonal/*.pyx
-include pykonal/*.pxd
-include pykonal/*.cpp
-include pykonal/data
+include glikonal/*.pyx
+include glikonal/*.pxd
+include glikonal/*.cpp
+include glikonal/data
 include README.md
