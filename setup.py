@@ -24,12 +24,12 @@ required        = ["cython>=0.29.14", "h5py", "numpy", "scipy"]
 extras          = {"tests": ["nose"]}
 ext_modules     = cythonize(
     [
-        "pykonal/constants.pyx",
-        "pykonal/fields.pyx",
-        "pykonal/heapq.pyx",
-        "pykonal/locate.pyx",
-        "pykonal/solver.pyx",
-        "pykonal/stats.pyx"
+        "glikonal/constants.pyx",
+        "glikonal/fields.pyx",
+        "glikonal/heapq.pyx",
+        "glikonal/locate.pyx",
+        "glikonal/solver.pyx",
+        "glikonal/stats.pyx"
     ],
     compiler_directives={
         "language_level": 3,
