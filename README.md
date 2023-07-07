@@ -13,7 +13,7 @@ This code implements the Fast Marching Method (FMM; Sethian *et al.*, 1996) for 
 ### From source code
 Download and unzip the [latest release](https://github.com/giovannipiccioli/glikonal/releases "Releases").
 ```bash
-sh$> cd path/to/pykonal
+sh$> cd path/to/glikonal
 sh$> pip install .
 ```
 ## Bugs
