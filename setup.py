@@ -15,7 +15,7 @@ description     = "Compute minimal altitude for an unpowered aircraft to glide b
 url             = "https://github.com/giovannipiccioli/glikonal"
 email           = "giovannipiccioli#gmail.com"
 author          = "Giovanni Piccioli"
-requires_python = ">=3"
+requires_python = ">=3.9"
 packages        = ["glikonal"]
 package_data    = {
     "glikonal": ["data/*", "data/marmousi2/*", "tests/data/*"],
