@@ -22,13 +22,14 @@ To better understand how the algorithm works one can start from artificial examp
 This notebook goes though these various examples fo elevation profile, to show how glikonal computes the minimal altitude for re-entry and the re-entry paths.
 Let us provide some pictures of this below.
 For an elevation profile with a single peak, and glide ratio of 1, we can plot the minimal altitude contour lines (in white), on top of the elevation map (color indicates elevation).
+![single peak min altitude](./gliding_distance/pics/single_peak_min_altitude.pdf)
 
 ### Real data
-
+The notebook "gliding_distance_real_ariport.ipynb" contains the code to download topographical (elevation) data and run the algorithm for a particular 
 
 
 ## Bugs
-Please report bugs, feature requests, and questions through the [Issues](https://github.com/malcolmw/pykonal/issues "PyKonal Issues tracker") tracker.
+Please report bugs, feature requests, and questions through the [Issues](https://github.com/giovannipiccioli/glikonal/issues "Glikonal Issues tracker") tracker.
 
 ## References
 1. Sethian, J. A. (1996). A fast marching level set method for monotonically advancing fronts. *Proceedings of the National Academy of Sciences, 93*(4), 1591–1595. https://doi.org/10.1073/pnas.93.4.1591
