@@ -6,7 +6,7 @@ build-backend = 'setuptools.build_meta'
 name = 'glikonal'
 version = '0.0.0'
 authors = [
-    {name='Malcolm C. A. White, Giovanni Piccioli', email='giovannipiccioli@gmail.com'}
+    {name='Giovanni Piccioli', email='giovannipiccioli@gmail.com'}
 ]
 description = 'Compute the minimal altitude to safely return to an airport in gliding flight'
 readme = 'README.md'
