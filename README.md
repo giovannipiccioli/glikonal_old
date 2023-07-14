@@ -2,7 +2,7 @@
 This code computes the minimal altitude for an unpowered aircraft to return to an airfield.
 It also computes the paths to follow for a safe re-entry.
 The code is mainly built on top of the *pykonal* library available [here](https://github.com/malcolmw/pykonal).
-This code implements the Fast Marching Method (FMM; Sethian *et al.*, 1996) for solving the eikonal equation in Cartesian or spherical coordinates in 2 or 3 dimensions.
+This code implements a modified Fast Marching Method (FMM; Sethian *et al.*, 1996) for solving the eikonal equation in Cartesian coordinates, with an elevation constraint.
 
 
 ## Installation
