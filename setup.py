@@ -20,7 +20,7 @@ packages        = ["glikonal"]
 package_data    = {
     "glikonal": ["data/*", "data/marmousi2/*", "tests/data/*"],
 }
-required        = ["cython>=0.29.14", "h5py", "numpy>=1.18.0", "scipy", "matplotlib", "rasterio"]
+required        = ["cython>=0.29.14", "h5py", "numpy", "scipy", "matplotlib", "rasterio"]
 extras          = {"tests": ["nose"]}
 ext_modules     = cythonize(
     [
