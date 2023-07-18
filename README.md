@@ -14,7 +14,7 @@ Then in the terminal execute
  pip install .
 ```
 ## Disclaimer
-This software has the potential to be used in safety critical applications. Let us stress that no guarantee of correctness is provided. In no case the author of this software shall be held liable for the direct or indirect consequences of its use. This software is provided by the copyright holders and contributors “as is” and any express or implied warranties, including, but not limited to, the implied warranties of merchantability and fitness for a particular purpose are disclaimed. In no event shall the copyright owner or contributors be liable for any direct, indirect, incidental, special, exemplary, or consequential damages.
+This software has the potential to be used in safety critical applications. Let us stress that no guarantee of correctness is provided. In no case the author of this software shall be held liable for the direct or indirect consequences of its use. This software is provided by the copyright holders and contributors “as is” and any express or implied warranties, including, but not limited to, the implied warranties of merchantability and fitness for a particular purpose are disclaimed. In no event shall the copyright owner or contributors be liable for any direct, indirect, incidental, special, exemplary, or consequential damages. See the LICENSE file for more information.
 
 
 ## Tutorials
