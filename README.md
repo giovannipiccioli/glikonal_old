@@ -1,4 +1,6 @@
-# Welcome to the *glikonal* repository!
+# This is an old version of the Glikonal repository. Please see [giovannipiccioli/glikonal](https://github.com/giovannipiccioli/glikonal) for the new version. 
+
+
 This code computes the minimal altitude for an unpowered aircraft to return to an airfield.
 It also computes the paths to follow for a safe re-entry.
 The code is mainly built on top of the *pykonal* library available [here](https://github.com/malcolmw/pykonal).
